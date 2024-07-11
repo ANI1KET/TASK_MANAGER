@@ -51,6 +51,7 @@ function CreateContent() {
 
     try {
       const res = await axios.post("/api/tasks", task);
+      console.log(res);
 
       if (res.data.error) {
         toast.error(res.data.error);
